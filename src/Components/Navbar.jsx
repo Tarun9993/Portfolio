@@ -3,7 +3,7 @@ import { IoMenuOutline } from "react-icons/io5";
 const Navbar = () => {
   return (
     <div className="relative bg-black">
-      <div className="backdrop-blur-lg border-b border-neutral-700/80 sticky top-0 w-full h-16 text-white flex justify-between items-center z-50 lg:px-35 lg:py-12 md:px-7 md:py-10">
+      <div className="backdrop-blur-lg border-b border-neutral-700/80 fixed top-0 w-full h-16 text-white flex justify-between items-center z-50 lg:px-35 lg:py-12 md:px-7 md:py-10">
         <div>
           <h1 className="text-2xl lg:text-3xl tracking-wide font-poppins cursor-pointer font-medium pl-16 py-5 lg:pl-0 md:pl-0 ">
              <span className="bg-gradient-to-r from-[#37BEF8] via-70% to-[#375FF8] text-transparent bg-clip-text font-bold">T</span>arun

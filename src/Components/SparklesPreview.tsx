@@ -3,9 +3,12 @@ import React from "react";
 import { SparklesCore } from "../Components/ui/sparkles";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
 import About from "./About";
 import TimelineDemo from "./TimelineDemo"
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 export function SparklesPreview() {
   return (
     (<div
@@ -20,7 +23,7 @@ export function SparklesPreview() {
           className="w-full h-full"
           particleColor="#FFFFFF" />
       </div>
-     <div className="md:flex lg:gap-10  z-10 lg:px-50 md:px-28 md:py-20  lg:py-30">
+     <div className="md:flex lg:gap-10  z-10 lg:px-50 md:px-28 md:py-20  lg:py-50">
         <div className="md:max-w-1/2">  
           <div className="">
         <h1 className="text-white font-semi-bold text-3xl tracking-wide sm:pt-18 sm:px-32 md:px-0 md:pt-0 pt-20 pl-20 pr-2">Hi, Myself     
@@ -31,14 +34,26 @@ export function SparklesPreview() {
             <h1 className="text-white font-medium tracking-wide text-2xl sm:px-40 sm:pt-10 sm:text-2xl md:pt-6 md:px-0 pt-5 px-21 leading-10">I'm A Full stack Developer </h1>
           </div>
           <div>
-            <h2 className="text-[#b9b9b9] md:pt-5 text-lg font-light sm:pt-7 sm:px-33 md:px-0 leading-8  pt-5 px-20 text-justify"> I’m a passionate and dedicated Web developer with expertise in building scalable and efficient web applications</h2>
+            <h2 className="text-[#b9b9b9] md:pt-5 text-lg font-light sm:pt-7 sm:px-33 md:px-0 leading-8  pt-5 px-20 text-justify"> 
+            I’m a passionate and dedicated Web developer with expertise in building scalable and efficient web applications</h2>
           </div>
           <div className="flex gap-7 pt-10 sm:px-60 md:px-0 px-20">
 
-            <a href="https://www.linkedin.com/in/tarun-kumar-1aaba2252/" className="z-50"target="_blank"><FaLinkedinIn size={50} className="text-white bg-neutral-900 p-3 rounded-xl cursor-pointer"/></a>
-          <a href="https://github.com/Tarun9993/" className="z-50" target="_blank"> <FaGithub size={50} className="text-white bg-neutral-900 p-3 rounded-xl cursor-pointer"/></a>
-          <a href="" target="_blank" className="z-50">
-          <h2 className="text-white bg-neutral-900 p-3 px-4 tracking-wide rounded-xl cursor-pointer ">RESUME</h2>
+            <a href="https://www.linkedin.com/in/tarun-kumar-1aaba2252/" className="z-50"target="_blank"><FaLinkedinIn size={50} className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer"/></a>
+          <a href="https://github.com/Tarun9993/" className="z-50" target="_blank"> <FaGithub size={50} className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer"/></a>
+         
+          <a
+                href="https://x.com/Tarun_225?t=H9gIh80DhLhwi93JyBtKEA&s=09"
+                className="z-50"
+                target="_blank"
+              >
+                <RiTwitterXLine
+                  size={50}
+                  className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer "
+                />
+              </a>
+          <a href="#" target="_blank" className="z-50">
+          <h2 className="text-white border border-neutral-200 p-3 px-4 tracking-wide rounded-xl cursor-pointer ">RESUME</h2>
           </a>
          
           </div>
@@ -61,6 +76,8 @@ export function SparklesPreview() {
      <About />
      <TimelineDemo />
      <Skills />
+     <Projects />
+     {/* <Contact /> */}
     </div>)
   );
 }
