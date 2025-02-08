@@ -37,7 +37,7 @@ export  function SparklesPreview() {
             <h2 className="text-[#b9b9b9] md:pt-5 text-lg font-light sm:pt-7 sm:px-33 md:px-0 leading-8  pt-5 px-10 text-justify w-full"> 
             I’m a passionate and dedicated Web developer with expertise in building scalable and efficient web applications</h2>
           </div>
-          <div className="flex flex-wrap gap-7 pt-10 sm:px-60 md:px-0 px-10">
+          <div className="flex flex-wrap sm:gap-7 gap-5 pt-10 sm:px-60 md:px-0 px-10">
 
             <a href="https://www.linkedin.com/in/tarun-kumar-1aaba2252/" className="z-50"target="_blank"><FaLinkedinIn size={50} className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer"/></a>
           <a href="https://github.com/Tarun9993/" className="z-50" target="_blank"> <FaGithub size={50} className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer"/></a>
