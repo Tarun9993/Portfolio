@@ -15,10 +15,10 @@ const About = () => {
 
         <div className="md:flex lg:gap-10 lg:px-50 sm:px-50 sm:pt-10 md:px-20  md:py-20 lg:py-10 px-15 pt-10">
             <div>
-                <img src="https://ank-portfolio-gray.vercel.app/assets/about_1removebg-15Clxbh4.png" alt="img"  className='sm:h-[400px] h-[300px]'/>
+                <img src="https://ank-portfolio-gray.vercel.app/assets/about_1removebg-15Clxbh4.png" alt="img"  className='sm:h-[400px]'/>
             </div>
             <div className='md:max-w-1/2 md:pt-20 sm:max-w-96 sm:pt-10'>
-                <h2 className='text-neutral-300 font-semi-bold text-xl font-sans md:leading-9 text-justify leading-8'>I’m a passionate developer who loves building fast and efficient web applications. I have strong skills in React.js, Tailwind CSS, Spring Boot, Hibernate, and MySQL. I focus on creating smooth user experiences and writing clean, maintainable code. Explore my work, and let's connect to build something amazing together!</h2>
+                <h2 className='text-neutral-400 font-semi-bold text-xl font-sans md:leading-9 text-justify leading-8'>I’m a passionate developer who loves building fast and efficient web applications. I have strong skills in React.js, Tailwind CSS, Spring Boot, Hibernate, and MySQL. I focus on creating smooth user experiences and writing clean, maintainable code. Explore my work, and let's connect to build something amazing together!</h2>
             </div>
         </div>
     </div>

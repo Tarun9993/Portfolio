@@ -110,7 +110,7 @@ const Contact = () => {
               Get in Touch
             </h1>
           </div>
-          <div className="text-center pt-6 font-sans">
+          <div className="text-center text-neutral-300 pt-6 font-sans">
             <h1 className="">Rajamahendravaram,Andhra Pradesh, India</h1>
             <h1 className="pt-2"> +91-9381788359</h1>
             <h1 className="pt-2">tadalatarun944@gmail.com</h1>

@@ -24,7 +24,6 @@ const Skills = () => {
                  <RiReactjsLine className='text-7xl text-cyan-400'/>
              </div>
 
-
              <div 
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <FaJava  className='text-7xl text-yellow-300'/>
