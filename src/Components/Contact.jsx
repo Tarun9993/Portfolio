@@ -4,6 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import toast, { Toaster } from 'react-hot-toast';
+import { motion } from "motion/react"
 const Contact = () => {
   const form = useRef(); 
   const [formData, setFormData] = useState({
@@ -45,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="z-50 bg-gradient-to-r from-black via-gray-950 to-black text-white p-8 rounded-lg">
+    <div className="z-50 bg-gradient-to-r from-black via-gray-950 to-black text-white p-8 ">
       <div className="text-center pb-20">
         <button className="inline-flex relative h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#37BEF8_0%,#375FF8_50%,#37BEF8_100%)]" />
@@ -56,7 +57,18 @@ const Contact = () => {
       </div>
 
       <div className="cursor-pointer lg:flex justify-self-auto md:px-15 lg:px-15 lg:gap-40">
-        <form ref={form} onSubmit={handleSubmit} className="space-y-4  lg:w-1/2">
+        <motion.form
+          initial={{ x: -70, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            type: "spring",
+            stiffness: 20,
+            damping: 10,
+            delay: 0.4,
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        ref={form} onSubmit={handleSubmit} className="space-y-4  lg:w-1/2">
           <div>
             <label className="block text-md tracking-wide font-medium">
               Name{" "}
@@ -103,8 +115,19 @@ const Contact = () => {
             Submit
           </button>
           <Toaster />
-        </form>
-        <div className="py-15 sm:py-0 lg:w-1/2">
+        </motion.form>
+        <motion.div
+          initial={{ x: 22, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            type: "spring",
+            stiffness: 20,
+            damping: 10,
+            delay: 0.4,
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+        className="py-15 sm:py-0 lg:w-1/2">
           <div className="text-center pt-10">
             <h1 className="font-bold tracking-wide text-2xl font-sans text-[#37BEF8]">
               Get in Touch
@@ -155,7 +178,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

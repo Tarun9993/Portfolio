@@ -4,10 +4,11 @@ import { FaJava } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiSpringboot } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
+import { motion } from "motion/react"
 const Skills = () => {
     return (
         // <div className='bg-gradient-to-r from-[#101010] via-[#1a1a1a] to-[#101010] border rounded-sm'>
-        <div className='pt-15 pb-30'>
+        <div className='pt-15 pb-30 bg-black'>
             <div className='text-center pt-15 pb-20'>
 
              <button className="inline-flex relative h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
@@ -17,30 +18,86 @@ const Skills = () => {
             </span>
           </button>
             </div>
-         <div
+         <motion.div
+          initial={{ x: -70, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.6,
+            type: "spring",
+            stiffness: 20,
+            damping: 10,
+            delay: 0.4,
+          }}
+          viewport={{ once: true, amount: 0.2 }} 
           className='flex flex-wrap items-center justify-center gap-7'>
-             <div  
+             <motion.div  
+             initial={{ y: 7 }}
+             animate={{ y: 0 }}
+             transition={{
+                duration: 1.5, 
+                delay: 0.2,
+               repeat: Infinity, 
+               repeatType: "reverse", 
+               ease: "easeInOut", 
+             }}
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <RiReactjsLine className='text-7xl text-cyan-400'/>
-             </div>
+             </motion.div>
 
-             <div 
+             <motion.div 
+              initial={{ y: -7 }}
+              animate={{ y: 0 }}
+              transition={{
+                 duration: 1.5, 
+                 delay: 0.2,
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                ease: "easeInOut", 
+              }}
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <FaJava  className='text-7xl text-yellow-300'/>
-             </div>
-             <div 
+             </motion.div>
+             <motion.div
+              initial={{ y: 10 }}
+              animate={{ y: 0 }}
+              transition={{
+                duration: 1.8, 
+                delay: 0.2,
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                ease: "easeInOut", 
+              }} 
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <RiTailwindCssFill className='text-7xl text-cyan-400'/>
-             </div>
-             <div 
+             </motion.div>
+             <motion.div 
+              initial={{ y: -7 }}
+              animate={{ y: 0 }}
+              transition={{
+                 duration: 1.2, 
+                 delay: 0.2,
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                ease: "easeInOut", 
+              }}
+             
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <SiSpringboot className='text-7xl text-green-400'/>
-             </div>
-             <div 
+             </motion.div>
+             <motion.div
+              initial={{ y: 10 }}
+              animate={{ y: 0 }}
+              transition={{
+                duration: 2, 
+                delay: 0.2,
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                ease: "easeInOut", 
+              }} 
              className='rounded-2xl border-4 border-neutral-900 p-2'>
                  <GrMysql className='text-7xl text-blue-800'/>
-             </div>
-             </div>
+             </motion.div>
+             </motion.div>
          </div>
    )
  }

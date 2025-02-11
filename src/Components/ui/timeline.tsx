@@ -26,7 +26,7 @@ export const Timeline = ({
 
   return (
     (<div
-      className="w-full  font-sans md:px-25 lg:px-70"
+      className="w-full bg-black  font-sans md:px-25 lg:px-70"
       ref={containerRef}>
      <div className="text-center pt-10">
      <button className="inline-flex relative h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

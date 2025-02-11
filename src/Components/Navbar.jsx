@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
+import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-scroll";
+import { motion } from "motion/react"
+import { navText } from "./animate";
 const Navbar = () => {
+  const [menu, setMenu] = useState(false);
+  const handleMenu = () =>{
+    setMenu(!menu);
+    console.log(menu);
+    
+    
+  }
   return (
+  <div>
     <div className="relative bg-black">
       <div className="bg-transparent border-b border-neutral-700/80 fixed top-0 w-full h-16 text-white flex justify-between items-center z-50 lg:px-35 lg:py-12 md:px-7 md:py-10">
-        <div>
+        <motion.div
+              variants={navText(0.1)}
+              initial="hidden"
+              animate="visible"
+        className="z-50"
+        >
         <Link
               to="/"
               smooth={true}
@@ -19,16 +35,22 @@ const Navbar = () => {
             arun
           </h1>
           </Link>
-        </div>
-        <div>
-          <ul className="hidden md:flex gap-1 text-md font-light cursor-pointer bg-neutral-900 py-2 px-4 rounded-xl ">
-            <Link
+        </motion.div>
+        <motion.div 
+        variants={navText(0.3)}
+        initial="hidden"
+        animate="visible"  
+        >
+          <ul className="hidden md:flex gap-1 text-md font-light cursor-pointer bg-black py-2 px-4 rounded-xl ">
+            <Link  
               to="/"
               smooth={true}
               duration={900}
               className="cursor-pointer"
             >
-              <li className="hover:bg-neutral-600 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+              <li
+              
+              className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
                 Home
               </li>
             </Link>
@@ -38,7 +60,7 @@ const Navbar = () => {
               duration={900}
               className="cursor-pointer"
             >
-              <li className="hover:bg-neutral-600 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
                 About
               </li>
             </Link>
@@ -48,7 +70,7 @@ const Navbar = () => {
               duration={900}
               className="cursor-pointer"
             >
-              <li className="hover:bg-neutral-600 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
                 Education
               </li>
             </Link>
@@ -58,7 +80,7 @@ const Navbar = () => {
               duration={900}
               className="cursor-pointer"
             >
-              <li className="hover:bg-neutral-600 hover:rounded-md transition-all duration-500 ease-in-out px-4 py-2 cursor-pointer">
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out px-4 py-2 cursor-pointer">
                 Technologies
               </li>
             </Link>
@@ -68,14 +90,14 @@ const Navbar = () => {
               duration={900}
               className="cursor-pointer"
             >
-              <li className="hover:bg-neutral-600 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
                 Projects
               </li>
             </Link>
           </ul>
-        </div>
-        <div>
+        </motion.div>
 
+        <div>
         <Link
               to="contact"
               smooth={true}
@@ -91,10 +113,70 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="absolute right-4 top-4 md:hidden pr-5">
-          <IoMenuOutline size={36} className="text-white cursor-pointer " />
+          {menu ? <RxCross1  size={30} className="text-white cursor-pointer " onClick={handleMenu} /> : <IoMenuOutline size={36} className="text-white cursor-pointer z-50 " onClick={handleMenu}/> }
         </div>
       </div>
+
+     
     </div>
+
+    {menu && <div className="bg-black fixed top-0 left-0 w-2/3 h-full z-30">
+    <ul className=" text-white bg-transparent   text-xl  pt-30 pb-16 text-center">
+            <Link  
+              to="/"
+              smooth={true}
+              duration={900}
+              className="cursor-pointer"
+            >
+              <li
+              className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+                Home
+              </li>
+            </Link>
+            <Link
+              to="about"
+              smooth={true}
+              duration={900}
+              className="cursor-pointer"
+            >
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+                About
+              </li>
+            </Link>
+            <Link
+              to="education"
+              smooth={true}
+              duration={900}
+              className="cursor-pointer"
+            >
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+                Education
+              </li>
+            </Link>
+            <Link
+              to="technologies"
+              smooth={true}
+              duration={900}
+              className="cursor-pointer"
+            >
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out px-4 py-2 cursor-pointer">
+                Technologies
+              </li>
+            </Link>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={900}
+              className="cursor-pointer"
+            >
+              <li className="hover:bg-neutral-900 hover:rounded-md transition-all duration-500 ease-in-out cursor-pointer px-4 py-2">
+                Projects
+              </li>
+            </Link>
+          </ul>
+    </div> }
+    
+  </div>
   );
 };
 
