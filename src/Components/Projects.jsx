@@ -6,6 +6,7 @@ import  pro3  from "../../src/assets/pro3.png"
 import  pro4  from "../../src/assets/pro4.png"
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from "motion/react"
+
 import { projectImg, projectText } from "./animate";
 const Projects = () => {
 

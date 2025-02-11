@@ -3,7 +3,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-scroll";
 import { motion } from "motion/react"
-import { navText } from "./animate";
+import { navText,navBg } from "./animate";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const handleMenu = () =>{
@@ -120,7 +120,11 @@ const Navbar = () => {
      
     </div>
 
-    {menu && <div className="bg-black fixed top-0 left-0 w-2/3 h-full z-30">
+    {menu && <motion.div
+    variants={navBg(0.3)}
+            initial="hidden"
+            animate="visible"
+    className="bg-black fixed top-0 left-0 w-2/3 h-full z-30">
     <ul className=" text-white bg-transparent   text-xl  pt-30 pb-16 text-center">
             <Link  
               to="/"
@@ -174,7 +178,7 @@ const Navbar = () => {
               </li>
             </Link>
           </ul>
-    </div> }
+    </motion.div> }
     
   </div>
   );
