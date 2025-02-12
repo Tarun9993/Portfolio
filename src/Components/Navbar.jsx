@@ -124,7 +124,7 @@ const Navbar = () => {
     variants={navBg(0.3)}
             initial="hidden"
             animate="visible"
-    className="bg-black fixed top-0 left-0 w-2/3 h-full z-30">
+    className="bg-black fixed top-0 left-0 w-2/3 h-full z-50">
     <ul className=" text-white bg-transparent   text-xl  pt-30 pb-16 text-center">
             <Link  
               to="/"
