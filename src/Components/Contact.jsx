@@ -56,7 +56,7 @@ const Contact = () => {
         </button>
       </div>
 
-      <div className="cursor-pointer lg:flex justify-self-auto md:px-15 lg:px-15 lg:gap-40">
+      <div className="cursor-pointer lg:flex justify-self-auto md:px-15 lg:px-15 lg:gap-40 z-50">
         <motion.form
           initial={{ x: -70, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

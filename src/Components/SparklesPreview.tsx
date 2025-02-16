@@ -8,8 +8,9 @@ import { Link } from "react-scroll";
 import { motion } from "motion/react"
 import { sparklesText } from "./animate"
 import { Typewriter } from "react-simple-typewriter";
-
+import resume from "../public/Resume.pdf"
 export  function SparklesPreview() {
+  
   return (
     (<div
       className="h-full relative w-full bg-black  overflow-hidden">
@@ -84,8 +85,8 @@ export  function SparklesPreview() {
                   className="text-white border border-neutral-200 p-3 rounded-xl cursor-pointer "
                 />
               </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"  className="z-20">
-          <h2 className="text-white border border-neutral-200 p-3 px-4 tracking-wide rounded-xl cursor-pointer ">RESUME</h2>
+          <a href={resume} download="resume" rel="noopener noreferrer"  className="z-20">
+          <h2 className="text-white border border-neutral-200 p-3 px-4 tracking-wide rounded-xl cursor-pointer " >RESUME</h2>
           </a>
          
           </motion.div>
