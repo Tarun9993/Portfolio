@@ -33,6 +33,37 @@ const Projects = () => {
           </span>
         </button>
       </div>
+         <div className="md:flex lg:px-80 justify-between lg:gap-20  pb-25 px-6 sm:px-50 md:px-20 md:gap-4">
+        <div className="">
+            <motion.div
+            variants={projectImg(0.8)}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="h-[280px] w-[350px] bg-[#080808db] rounded-2xl">
+            <img src={pro3} alt="img" className="h-56 p-2 rounded-2xl" />
+            <div className="py-1 pl-3 flex gap-4">
+            <a href="https://github.com/Tarun9993/TODO-FULL-STACK" className="z-40" target="_blank"> <FaGithub size={42} className="text-white bg-neutral-900 p-1 rounded-xl cursor-pointer"/></a>
+            <a href="//" className="z-40" target="_blank"> <h2 className="text-white border border-white p-2 px-4 tracking-wide rounded-xl cursor-pointer ">Live</h2> </a>
+            </div>
+            </motion.div>
+            </div>
+        <motion.div
+        variants={projectText(0.8)}
+        whileInView="visible"
+        initial="hidden"
+        viewport={{ once: true }}
+        className=" mt-8 md:mt-0">
+        <h1 className="text-white pl-5 font-semibold text-xl">Too-Do Applications</h1>
+            <h1 className="text-neutral-500 font-sans  md:text-md text-sm md:font-semi-bold p-5 text-justify">This is a <span className="text-white p-1 rounded-md bg-neutral-900 font-bold">Full-Stack Todo Application</span> that allows users to register, log in, and manage their daily tasks securely. Each user can add, update, delete, mark tasks as pending or completed, and search/filter tasks by name, description, priority, or status. JWT authentication ensures only authorized users can access their tasks. A user-friendly UI with status-based styling improves usability</h1>
+            <div className="pl-5 flex gap-2 pt-3 pb-5">
+              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">React</span>
+              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">Tailwind CSS</span>
+              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">Spring Boot</span>
+              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">Jwt</span>
+            </div>
+        </motion.div>
+      </div>
       <div className="md:flex lg:px-80 justify-between lg:gap-20  pb-25 px-6 sm:px-50 md:px-20 md:gap-4">
         <div>
             <motion.div
@@ -93,35 +124,6 @@ const Projects = () => {
               <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">React</span>
               <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">Tailwind CSS</span>
              
-            </div>
-        </motion.div>
-      </div>
-      <div className="md:flex lg:px-80 justify-between lg:gap-20  pb-25 px-6 sm:px-50 md:px-20 md:gap-4">
-        <div className="">
-            <motion.div
-            variants={projectImg(0.8)}
-            whileInView="visible"
-            initial="hidden"
-            viewport={{ once: true }}
-            className="h-[280px] w-[350px] bg-[#080808db] rounded-2xl">
-            <img src={pro3} alt="img" className="h-56 p-2 rounded-2xl" />
-            <div className="py-1 pl-3 flex gap-4">
-            <a href="https://github.com/Tarun9993/Too-Doo" className="z-40" target="_blank"> <FaGithub size={42} className="text-white bg-neutral-900 p-1 rounded-xl cursor-pointer"/></a>
-            <a href="https://too-doo-one.vercel.app/" className="z-40" target="_blank"> <h2 className="text-white border border-white p-2 px-4 tracking-wide rounded-xl cursor-pointer ">Live</h2> </a>
-            </div>
-            </motion.div>
-            </div>
-        <motion.div
-        variants={projectText(0.8)}
-        whileInView="visible"
-        initial="hidden"
-        viewport={{ once: true }}
-        className=" mt-8 md:mt-0">
-        <h1 className="text-white pl-5 font-semibold text-xl">Too-Do Applications</h1>
-            <h1 className="text-neutral-500 font-sans  md:text-md text-sm md:font-semi-bold p-5 text-justify">This To-Do App is built using React and Tailwind CSS. It helps users manage their daily tasks by adding, editing, and deleting to-dos. The app provides a simple and interactive interface for better task organization.</h1>
-            <div className="pl-5 flex gap-2 pt-3 pb-5">
-              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">React</span>
-              <span className="text-[#347BF9] bg-neutral-900 px-2 text-sm rounded-sm font-semibold tracking-wide">Tailwind CSS</span>
             </div>
         </motion.div>
       </div>
